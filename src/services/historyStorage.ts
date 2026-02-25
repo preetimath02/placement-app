@@ -85,18 +85,10 @@ export function updateSkillConfidence(
   
   // Recalculate score based on confidence
   let newScore = entry.readinessScore;
-  const allSkills = [
-    ...entry.extractedSkills.coreCS,
-    ...entry.extractedSkills.languages,
-    ...entry.extractedSkills.web,
-    ...entry.extractedSkills.data,
-    ...entry.extractedSkills.cloud,
-    ...entry.extractedSkills.testing,
-  ];
   
   // Calculate adjustment
   let adjustment = 0;
-  Object.entries(updatedSkillConfidenceMap).forEach(([s, c]) => {
+  Object.entries(updatedSkillConfidenceMap).forEach(([, c]) => {
     if (c === 'know') {
       adjustment += 2;
     } else {

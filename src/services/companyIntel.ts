@@ -40,9 +40,6 @@ export function generateCompanyIntel(companyName: string, jdText: string, skills
   
   // Determine hiring focus based on size and skills
   let hiringFocus = '';
-  const hasDSA = skills.coreCS.includes('DSA') || skills.coreCS.includes('Data Structures');
-  const hasWeb = skills.web.length > 0;
-  const hasCloud = skills.cloud.length > 0;
   
   if (sizeCategory === 'Enterprise') {
     hiringFocus = 'Structured DSA + core fundamentals. Expect rigorous algorithmic rounds with emphasis on problem-solving patterns and scalable system design.';
