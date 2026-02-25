@@ -12,7 +12,7 @@ const midSizeCompanies = [
   'snowflake', 'databricks', 'confluent', 'elastic', 'mongodb'
 ];
 
-export function generateCompanyIntel(companyName: string, jdText: string, skills: ExtractedSkills): CompanyIntel {
+export function generateCompanyIntel(companyName: string, jdText: string, _skills: ExtractedSkills): CompanyIntel {
   const normalizedName = companyName.toLowerCase().trim();
   
   // Determine size category
